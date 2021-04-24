@@ -7,7 +7,8 @@ public class DisplayLabels : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI distanceValue;
     [SerializeField] TextMeshProUGUI speedValue;
-    [SerializeField] TextMeshProUGUI resourceLabels;
+    [SerializeField] TextMeshProUGUI dataLabel;
+    [SerializeField] TextMeshProUGUI goldLabel;
 
     [SerializeField] ResourceManager resourceManager;
     [SerializeField] CalculateDistance calculateDistance;
@@ -19,7 +20,8 @@ public class DisplayLabels : MonoBehaviour
         speedValue.text = calculateDistance.GetSpeedString();
 
         string dataText = resourceManager.GetData().ToString();
-        string oreText = resourceManager.GetGold().ToString();
-        resourceLabels.text = dataText + "\n" + oreText;
+        string goldText = resourceManager.GetGold().ToString();
+        dataLabel.text = dataText;
+        goldLabel.text = goldText;
     }
 }

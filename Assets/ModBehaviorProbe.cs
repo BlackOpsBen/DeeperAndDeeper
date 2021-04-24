@@ -12,9 +12,12 @@ public class ModBehaviorProbe : MonoBehaviour
 
     private ResourceManager resourceManager;
 
+    private UpgradeManager upgradeManager;
+
     private void Start()
     {
         resourceManager = FindObjectOfType<ResourceManager>();
+        upgradeManager = FindObjectOfType<UpgradeManager>();
     }
 
     private void Update()
@@ -23,7 +26,7 @@ public class ModBehaviorProbe : MonoBehaviour
 
         if (timer > interval)
         {
-            resourceManager.ModifyData(amountCollected);
+            resourceManager.ModifyData(Mathf.RoundToInt(amountCollected * upgradeManager.GetUpgradeMultiplier(0)));
             timer = 0f;
         }
     }
