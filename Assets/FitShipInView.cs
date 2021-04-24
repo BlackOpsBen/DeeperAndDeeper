@@ -6,6 +6,7 @@ public class FitShipInView : MonoBehaviour
 {
     [SerializeField] private Transform targetBottom;
     [SerializeField] private Transform targetTop;
+    [SerializeField] private float lerpSpeed = 2f;
 
     void Start()
     {
@@ -15,6 +16,7 @@ public class FitShipInView : MonoBehaviour
     void Update()
     {
         float shipHeight = Vector3.Distance(targetBottom.position, targetTop.position);
-        transform.position = new Vector3(0f, targetTop.position.y - shipHeight / 2, -shipHeight);
+        Vector3 targetPosition = new Vector3(0f, targetTop.position.y - shipHeight / 2, -shipHeight);
+        transform.position = Vector3.Lerp(transform.position, targetPosition, Time.deltaTime * lerpSpeed);
     }
 }
