@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class FuelManager : MonoBehaviour
 {
-    [SerializeField] float startingCapacity = 100f;
+    [SerializeField] float startingCapacity = 10f;
+    [SerializeField] float burnRate = 1f;
 
     private CalculateDistance calculateDistance;
 
@@ -22,8 +23,8 @@ public class FuelManager : MonoBehaviour
     {
         if (currentFuel > 0.0f)
         {
-            calculateDistance.Accelerate(Time.deltaTime);
-            currentFuel -= Time.deltaTime;
+            calculateDistance.Accelerate(Time.deltaTime * burnRate);
+            currentFuel -= Time.deltaTime * burnRate;
             if (currentFuel < 0.0f)
             {
                 currentFuel = 0.0f;
@@ -34,5 +35,15 @@ public class FuelManager : MonoBehaviour
     public void Refuel()
     {
         currentFuel = currentCapacity;
+    }
+
+    public float GetCapacity()
+    {
+        return currentCapacity;
+    }
+
+    public float GetFuel()
+    {
+        return currentFuel;
     }
 }
