@@ -43,7 +43,7 @@ public class FuelManager : MonoBehaviour
 
     private void UpdateCapacity()
     {
-        currentCapacity = shipManager.GetModuleOptions()[0].quantity * startingCapacity + startingCapacity;
+        currentCapacity = shipManager.GetModuleOptions()[0].quantity * startingCapacity + startingCapacity; // TODO make not hardcoded
     }
 
     public void Refuel()

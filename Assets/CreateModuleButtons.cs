@@ -8,6 +8,10 @@ public class CreateModuleButtons : MonoBehaviour
 {
     [SerializeField] GameObject moduleBuyButton;
     [SerializeField] ShipManager shipManager;
+    [SerializeField] FuelManager fuelManager;
+    [SerializeField] Sprite refuelIcon;
+    [SerializeField] int refuelCost = 300;
+    [SerializeField] Color refuelButtonColor = Color.red;
 
     [SerializeField] private float xMargin = 10f;
     [SerializeField] private float yMargin = 10f;
@@ -26,6 +30,20 @@ public class CreateModuleButtons : MonoBehaviour
             SetOnClick(button, i);
             SetUI(button, i);
         }
+
+        CreateRefuelButton();
+    }
+
+    private void CreateRefuelButton()
+    {
+        GameObject button = Instantiate(moduleBuyButton, transform);
+        buttons.Add(button);
+
+        SetOnClick(button);
+        SetUI(button);
+
+        Button btnComp = button.GetComponent<Button>();
+        btnComp.image.color = refuelButtonColor;
     }
 
     // Update is called once per frame
@@ -45,10 +63,22 @@ public class CreateModuleButtons : MonoBehaviour
         btnComp.onClick.AddListener(() => shipManager.AddModule(index));
     }
 
+    private void SetOnClick(GameObject button)
+    {
+        Button btnComp = button.GetComponent<Button>();
+        btnComp.onClick.AddListener(() => fuelManager.Refuel());
+    }
+
     private void SetUI(GameObject button, int index)
     {
         DisplayButton displayButton = button.GetComponent<DisplayButton>();
         ModuleOption modOption = shipManager.GetModuleOptions()[index];
         displayButton.InitializeButton(modOption.name, modOption.icon, modOption.goldCost);
+    }
+
+    private void SetUI(GameObject button)
+    {
+        DisplayButton displayButton = button.GetComponent<DisplayButton>();
+        displayButton.InitializeButton("Refuel", refuelIcon, refuelCost);
     }
 }
