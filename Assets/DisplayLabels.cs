@@ -16,7 +16,7 @@ public class DisplayLabels : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        distanceLabel.text = distancePrefix + calculateDistance.GetDistance();
+        distanceLabel.text = distancePrefix + calculateDistance.GetDistance().ToString() + " km";
         string dataText = resourceManager.GetData().ToString();
         string oreText = resourceManager.GetGold().ToString();
         resourceLabels.text = dataText + "\n" + oreText;

@@ -18,8 +18,8 @@ public class CalculateDistance : MonoBehaviour
         speed += amount;
     }
 
-    public float GetDistance()
+    public int GetDistance()
     {
-        return distance;
+        return Mathf.RoundToInt(distance);
     }
 }
