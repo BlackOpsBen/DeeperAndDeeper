@@ -25,6 +25,11 @@ public class ShipManager : MonoBehaviour
         moduleOptions[index].quantity++;
         previewShip.AddModule(moduleOptions[index].moduleObject);
     }
+
+    public ModuleOption[] GetModuleOptions()
+    {
+        return moduleOptions;
+    }
 }
 
 [System.Serializable]
