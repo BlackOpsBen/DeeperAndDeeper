@@ -18,8 +18,21 @@ public class CalculateDistance : MonoBehaviour
         speed += amount;
     }
 
-    public int GetDistance()
+    public float GetDistance()
     {
-        return Mathf.RoundToInt(distance);
+        return distance;
+    }
+
+    public string GetDistanceString()
+    {
+        string formattedDistance = $"{distance:0.0}";
+        return formattedDistance + " km";
+    }
+
+    public string GetSpeedString()
+    {
+        float kmps = speed;
+        string formattedKmps = $"{kmps:0.0}";
+        return formattedKmps + " km/s";
     }
 }

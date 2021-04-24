@@ -5,9 +5,8 @@ using TMPro;
 
 public class DisplayLabels : MonoBehaviour
 {
-    [SerializeField] string distancePrefix = "Distance: ";
-
-    [SerializeField] TextMeshProUGUI distanceLabel;
+    [SerializeField] TextMeshProUGUI distanceValue;
+    [SerializeField] TextMeshProUGUI speedValue;
     [SerializeField] TextMeshProUGUI resourceLabels;
 
     [SerializeField] ResourceManager resourceManager;
@@ -16,7 +15,9 @@ public class DisplayLabels : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        distanceLabel.text = distancePrefix + calculateDistance.GetDistance().ToString() + " km";
+        distanceValue.text = calculateDistance.GetDistanceString();
+        speedValue.text = calculateDistance.GetSpeedString();
+
         string dataText = resourceManager.GetData().ToString();
         string oreText = resourceManager.GetGold().ToString();
         resourceLabels.text = dataText + "\n" + oreText;

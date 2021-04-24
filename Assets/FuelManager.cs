@@ -25,7 +25,7 @@ public class FuelManager : MonoBehaviour
     private void Update()
     {
         BurnFuel();
-        UpdateCapacity();
+        //UpdateCapacity();
     }
 
     private void BurnFuel()
@@ -41,9 +41,14 @@ public class FuelManager : MonoBehaviour
         }
     }
 
-    private void UpdateCapacity()
+    /*private void UpdateCapacity()
     {
         currentCapacity = shipManager.GetModuleOptions()[0].quantity * startingCapacity + startingCapacity; // TODO make not hardcoded
+    }*/
+
+    public void ModifyCapacity(float amount)
+    {
+        currentCapacity += amount;
     }
 
     public void Refuel()

@@ -8,18 +8,6 @@ public class ShipManager : MonoBehaviour
 
     [SerializeField] private ModuleOption[] moduleOptions;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void AddModule(int index)
     {
         moduleOptions[index].quantity++;

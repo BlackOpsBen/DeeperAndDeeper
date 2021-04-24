@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 4454949793419113267}
   - component: {fileID: 8155690321330652311}
   - component: {fileID: 4172670346948464479}
+  - component: {fileID: 7739505019370387329}
+  - component: {fileID: 2350952637730399448}
   m_Layer: 0
   m_Name: Mod_FuelTank
   m_TagString: Untagged
@@ -81,3 +83,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &7739505019370387329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1825029760694321125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 081fd648e70cef24dab2a19d94547704, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2350952637730399448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1825029760694321125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 271a2ca89d6f84843bbacd42e77819e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

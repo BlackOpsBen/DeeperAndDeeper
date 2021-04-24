@@ -8,7 +8,8 @@ public class CreateModuleButtons : MonoBehaviour
 {
     [SerializeField] GameObject moduleBuyButton;
     [SerializeField] ShipManager shipManager;
-    [SerializeField] FuelManager fuelManager;
+    //[SerializeField] FuelManager fuelManager;
+    [SerializeField] PurchaseManager purchaseManager;
     [SerializeField] Sprite refuelIcon;
     [SerializeField] int refuelCost = 300;
     [SerializeField] Color refuelButtonColor = Color.red;
@@ -62,13 +63,13 @@ public class CreateModuleButtons : MonoBehaviour
     private void SetOnClick(GameObject button, int index)
     {
         Button btnComp = button.GetComponent<Button>();
-        btnComp.onClick.AddListener(() => shipManager.AddModule(index));
+        btnComp.onClick.AddListener(() => purchaseManager.AttemptBuyModule(index));
     }
 
     private void SetOnClick(GameObject button)
     {
         Button btnComp = button.GetComponent<Button>();
-        btnComp.onClick.AddListener(() => fuelManager.Refuel());
+        btnComp.onClick.AddListener(() => purchaseManager.AttemptBuyFuel(refuelCost));
     }
 
     private void SetUI(GameObject button, int index)

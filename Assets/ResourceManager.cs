@@ -5,14 +5,16 @@ using UnityEngine;
 public class ResourceManager : MonoBehaviour
 {
     //[SerializeField] private Resource[] resources;
+    [SerializeField] private int startingData = 0;
     [SerializeField] private int startingGold = 100;
 
-    private int data = 0;
+    private int data;
     private int gold;
     
     // Start is called before the first frame update
     void Start()
     {
+        data = startingData;
         gold = startingGold;
         /*foreach (Resource resource in resources)
         {
