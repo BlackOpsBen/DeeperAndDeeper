@@ -14,6 +14,9 @@ public class CreateUpgradeButtons : MonoBehaviour
 
     [SerializeField] RectTransform parentPanel;
 
+    [SerializeField] Sprite dataCostIcon;
+    [SerializeField] Color dataCostIconColor;
+
     [SerializeField] private float xMargin = 10f;
     [SerializeField] private float yMargin = 10f;
     [SerializeField] private float spacing = 10f;
@@ -32,6 +35,14 @@ public class CreateUpgradeButtons : MonoBehaviour
         }
     }
 
+    /*private void Update()
+    {
+        for (int i = 0; i < buttons.Count; i++)
+        {
+            SetUI(buttons[i], i);
+        }
+    }*/
+
     private void SetOnClick(GameObject button, int index)
     {
         Button btnComp = button.GetComponent<Button>();
@@ -42,6 +53,11 @@ public class CreateUpgradeButtons : MonoBehaviour
     {
         DisplayButton displayButton = button.GetComponent<DisplayButton>();
         UpgradeOption upgradeOption = upgradeManager.GetUpgradeOptions()[index];
-        displayButton.InitializeButton(upgradeOption.displayName, upgradeOption.icon, upgradeOption.dataCost);
+        displayButton.InitializeButton(upgradeOption.displayName, upgradeOption.icon, upgradeOption.dataCost, dataCostIcon, dataCostIconColor);
+    }
+
+    public void UpdateButton(int index)
+    {
+        SetUI(buttons[index], index);
     }
 }

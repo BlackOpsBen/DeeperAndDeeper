@@ -11,12 +11,13 @@ public class DisplayButton : MonoBehaviour
     [SerializeField] TextMeshProUGUI costLabel;
     [SerializeField] Image costIcon;
 
-    public void InitializeButton(string mainText, Sprite mainImage, int cost, Sprite costImage)
+    public void InitializeButton(string mainText, Sprite mainImage, int cost, Sprite costImage, Color costColor)
     {
         mainLabel.text = mainText;
         mainIcon.sprite = mainImage;
         costLabel.text = cost.ToString();
         costIcon.sprite = costImage;
+        costIcon.color = costColor;
     }
 
     public void InitializeButton(string mainText, Sprite mainImage, int cost)

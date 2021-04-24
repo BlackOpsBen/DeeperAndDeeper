@@ -8,6 +8,7 @@ public class PurchaseManager : MonoBehaviour
     private ShipManager shipManager;
     private FuelManager fuelManager;
     private UpgradeManager upgradeManager;
+    private CreateUpgradeButtons createUpgradeButtons;
 
     private void Start()
     {
@@ -15,6 +16,7 @@ public class PurchaseManager : MonoBehaviour
         shipManager = GetComponent<ShipManager>();
         fuelManager = GetComponent<FuelManager>();
         upgradeManager = GetComponent<UpgradeManager>();
+        createUpgradeButtons = FindObjectOfType<CreateUpgradeButtons>();
     }
 
     public void AttemptBuyModule(int index)
@@ -56,6 +58,7 @@ public class PurchaseManager : MonoBehaviour
             // Successful purchase
             upgradeManager.PerformUpgrade(index);
             resourceManager.ModifyData(-price);
+            createUpgradeButtons.UpdateButton(index);
         }
         else
         {

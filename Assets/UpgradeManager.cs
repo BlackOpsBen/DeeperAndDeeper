@@ -16,7 +16,6 @@ public class UpgradeManager : MonoBehaviour
 
     public void PerformUpgrade(int index)
     {
-        Debug.LogWarning("Upgrading " + upgradeOptions[index].displayName);
         upgradeOptions[index].Advance();
     }
 
@@ -38,15 +37,15 @@ public class UpgradeOption
     [HideInInspector] public string displayName;
     [SerializeField] public Sprite icon;
     [SerializeField] public int dataCost;
-    [SerializeField] public float costIncrease = 100f;
+    [SerializeField] public int costIncrease = 100;
     [SerializeField] public float costIncreaseMultipier = 1.1f;
     [SerializeField] public int currentMultiplier = 1;
 
     public void Advance()
     {
         currentMultiplier++;
-        costIncrease *= costIncreaseMultipier;
+        dataCost += costIncrease;
+        costIncrease = Mathf.RoundToInt(costIncrease * costIncreaseMultipier);
         displayName = baseName + " " + currentMultiplier.ToString();
-        Debug.LogWarning("Advanced to " + displayName);
     }
 }
