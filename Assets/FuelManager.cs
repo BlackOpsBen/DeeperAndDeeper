@@ -12,14 +12,23 @@ public class FuelManager : MonoBehaviour
     private float currentCapacity;
     private float currentFuel;
 
+    private ShipManager shipManager;
+
     private void Start()
     {
         calculateDistance = GetComponent<CalculateDistance>();
         currentCapacity = startingCapacity;
         currentFuel = currentCapacity;
+        shipManager = GetComponent<ShipManager>();
     }
 
     private void Update()
+    {
+        BurnFuel();
+        UpdateCapacity();
+    }
+
+    private void BurnFuel()
     {
         if (currentFuel > 0.0f)
         {
@@ -30,6 +39,11 @@ public class FuelManager : MonoBehaviour
                 currentFuel = 0.0f;
             }
         }
+    }
+
+    private void UpdateCapacity()
+    {
+        currentCapacity = shipManager.GetModuleOptions()[0].quantity * startingCapacity + startingCapacity;
     }
 
     public void Refuel()
