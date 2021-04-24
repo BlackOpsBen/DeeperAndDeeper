@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.053541735, g: 0.00072705327, b: 0.22380947, a: 1}
+  m_IndirectSpecularColor: {r: 0.49981636, g: 0.7008365, b: 0.6134798, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -633,6 +633,108 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7790686705514330499, guid: da0e0ba9b351b0046926ba7b250da8be, type: 3}
   m_PrefabInstance: {fileID: 1211871726}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &298873220
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 298873221}
+  - component: {fileID: 298873224}
+  - component: {fileID: 298873223}
+  - component: {fileID: 298873222}
+  m_Layer: 5
+  m_Name: UpgradePanel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &298873221
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 298873220}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 530763052}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -20, y: 20}
+  m_SizeDelta: {x: 530.9199, y: 733}
+  m_Pivot: {x: 1, y: 0}
+--- !u!114 &298873222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 298873220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59f8146938fff824cb5fd77236b75775, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 20
+    m_Right: 20
+    m_Top: 20
+    m_Bottom: 20
+  m_ChildAlignment: 0
+  m_Spacing: 10
+  m_ChildForceExpandWidth: 1
+  m_ChildForceExpandHeight: 1
+  m_ChildControlWidth: 1
+  m_ChildControlHeight: 1
+  m_ChildScaleWidth: 0
+  m_ChildScaleHeight: 0
+  m_ReverseArrangement: 0
+--- !u!114 &298873223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 298873220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.4}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &298873224
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 298873220}
+  m_CullTransparentMesh: 1
 --- !u!1 &320753386
 GameObject:
   m_ObjectHideFlags: 0
@@ -890,6 +992,7 @@ GameObject:
   - component: {fileID: 530763053}
   - component: {fileID: 530763054}
   - component: {fileID: 530763055}
+  - component: {fileID: 530763056}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -977,6 +1080,7 @@ RectTransform:
   - {fileID: 2018837785}
   - {fileID: 761240321}
   - {fileID: 1926492594}
+  - {fileID: 298873221}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1042,6 +1146,25 @@ MonoBehaviour:
   fuelManager: {fileID: 2111303433}
   container: {fileID: 761240321}
   fill: {fileID: 1926492594}
+--- !u!114 &530763056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 530763048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fb41ad9696462140908ca558cd7f6ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  upgradeBuyButton: {fileID: 4322465121099569473, guid: a7d3dda504503c64db839a9ac56bdeaa, type: 3}
+  upgradeManager: {fileID: 2111303435}
+  purchaseManager: {fileID: 2111303434}
+  parentPanel: {fileID: 298873221}
+  xMargin: 10
+  yMargin: 10
+  spacing: 0
 --- !u!1001 &546996259
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1117,7 +1240,7 @@ GameObject:
   - component: {fileID: 610803670}
   - component: {fileID: 610803669}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: PurchasePanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2236,6 +2359,7 @@ GameObject:
   - component: {fileID: 2111303432}
   - component: {fileID: 2111303433}
   - component: {fileID: 2111303434}
+  - component: {fileID: 2111303435}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -2343,6 +2467,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0afcb95534dcbc4095e9dc645ffc039, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2111303435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2111303428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d37f4e86a09a807469ffab07cba30ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  upgradeOptions:
+  - name: Improved Alchemy
+    icon: {fileID: 21300000, guid: d49e8541f175d3c41a58d36ec117d51f, type: 3}
+    dataCost: 200
+  - name: Improved Research
+    icon: {fileID: 21300000, guid: e355ea4b189d3a54683b6279c2804e6e, type: 3}
+    dataCost: 300
+  - name: Advanced Thrusters
+    icon: {fileID: 21300000, guid: 498eed06d4640c2469c00697dc654757, type: 3}
+    dataCost: 500
 --- !u!1 &2121406503
 GameObject:
   m_ObjectHideFlags: 0

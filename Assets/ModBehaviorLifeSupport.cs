@@ -2,13 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ModBehaviorProbe : MonoBehaviour
+public class ModBehaviorLifeSupport : MonoBehaviour
 {
-    private float interval = .5f;
+    private float interval = 1f;
 
     private float timer = 0f;
 
-    private int amountCollected = 6;
+    private int amountCollected = 1;
 
     private ResourceManager resourceManager;
 
@@ -23,7 +23,7 @@ public class ModBehaviorProbe : MonoBehaviour
 
         if (timer > interval)
         {
-            resourceManager.ModifyData(amountCollected);
+            resourceManager.ModifyGold(amountCollected);
             timer = 0f;
         }
     }

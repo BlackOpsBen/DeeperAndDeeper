@@ -7,12 +7,14 @@ public class PurchaseManager : MonoBehaviour
     private ResourceManager resourceManager;
     private ShipManager shipManager;
     private FuelManager fuelManager;
+    private UpgradeManager upgradeManager;
 
     private void Start()
     {
         resourceManager = GetComponent<ResourceManager>();
         shipManager = GetComponent<ShipManager>();
         fuelManager = GetComponent<FuelManager>();
+        upgradeManager = GetComponent<UpgradeManager>();
     }
 
     public void AttemptBuyModule(int index)
@@ -43,6 +45,22 @@ public class PurchaseManager : MonoBehaviour
         {
             // Insufficient Gold
             Debug.LogWarning("Not enough gold.");
+        }
+    }
+
+    public void AttemptBuyUpgrade(int index)
+    {
+        int price = upgradeManager.GetUpgradeOptions()[index].dataCost;
+        if (resourceManager.GetData() >= price)
+        {
+            // Successful purchase
+            upgradeManager.PerformUpgrade(index);
+            resourceManager.ModifyData(-price);
+        }
+        else
+        {
+            // Insufficient Gold
+            Debug.LogWarning("Not enough data.");
         }
     }
 }
