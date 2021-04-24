@@ -12,9 +12,12 @@ public class ModBehaviorLifeSupport : MonoBehaviour
 
     private ResourceManager resourceManager;
 
+    private UpgradeManager upgradeManager;
+
     private void Start()
     {
         resourceManager = FindObjectOfType<ResourceManager>();
+        upgradeManager = FindObjectOfType<UpgradeManager>();
     }
 
     private void Update()
@@ -23,7 +26,7 @@ public class ModBehaviorLifeSupport : MonoBehaviour
 
         if (timer > interval)
         {
-            resourceManager.ModifyGold(amountCollected);
+            resourceManager.ModifyGold(Mathf.RoundToInt(amountCollected * upgradeManager.GetUpgradeMultiplier(0)));
             timer = 0f;
         }
     }

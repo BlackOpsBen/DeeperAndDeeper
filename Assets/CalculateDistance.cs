@@ -29,6 +29,11 @@ public class CalculateDistance : MonoBehaviour
         return formattedDistance + " km";
     }
 
+    public float GetSpeed()
+    {
+        return speed;
+    }
+
     public string GetSpeedString()
     {
         float kmps = speed;

@@ -41,7 +41,7 @@ public class CreateUpgradeButtons : MonoBehaviour
     private void SetUI(GameObject button, int index)
     {
         DisplayButton displayButton = button.GetComponent<DisplayButton>();
-        UpgradeOption modOption = upgradeManager.GetUpgradeOptions()[index];
-        displayButton.InitializeButton(modOption.name, modOption.icon, modOption.dataCost);
+        UpgradeOption upgradeOption = upgradeManager.GetUpgradeOptions()[index];
+        displayButton.InitializeButton(upgradeOption.displayName, upgradeOption.icon, upgradeOption.dataCost);
     }
 }
