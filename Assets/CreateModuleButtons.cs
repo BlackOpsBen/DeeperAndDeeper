@@ -12,6 +12,7 @@ public class CreateModuleButtons : MonoBehaviour
     [SerializeField] Sprite refuelIcon;
     [SerializeField] int refuelCost = 300;
     [SerializeField] Color refuelButtonColor = Color.red;
+    [SerializeField] RectTransform parentPanel;
 
     [SerializeField] private float xMargin = 10f;
     [SerializeField] private float yMargin = 10f;
@@ -24,7 +25,7 @@ public class CreateModuleButtons : MonoBehaviour
     {
         for (int i = 0; i < shipManager.GetModuleOptions().Length; i++)
         {
-            GameObject button = Instantiate(moduleBuyButton, transform);
+            GameObject button = Instantiate(moduleBuyButton, parentPanel);
             buttons.Add(button);
 
             SetOnClick(button, i);
@@ -36,7 +37,7 @@ public class CreateModuleButtons : MonoBehaviour
 
     private void CreateRefuelButton()
     {
-        GameObject button = Instantiate(moduleBuyButton, transform);
+        GameObject button = Instantiate(moduleBuyButton, parentPanel);
         buttons.Add(button);
 
         SetOnClick(button);
@@ -49,12 +50,13 @@ public class CreateModuleButtons : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        for (int i = 0; i < buttons.Count; i++)
+        /*for (int i = 0; i < buttons.Count; i++)
         {
             RectTransform rect = buttons[i].GetComponent<RectTransform>();
-            float yOffset = yMargin + rect.rect.height * i + spacing * i;
+            float yOffset = yMargin + (rect.rect.height * i) + (spacing * i);
             rect.SetPositionAndRotation(new Vector3(xMargin, yOffset, 0f), Quaternion.identity);
-        }
+            //rect.rect.Set(xMargin, yOffset, rect.rect.width, rect.rect.height);
+        }*/
     }
 
     private void SetOnClick(GameObject button, int index)
