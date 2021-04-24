@@ -5,26 +5,29 @@ using UnityEngine;
 public class PreviewShip : MonoBehaviour
 {
     [SerializeField] GameObject baseThrusters;
-    [SerializeField] GameObject[] moduleOptions;
     [SerializeField] GameObject endCap;
 
-    private GameObject bottomPiece;
     private List<GameObject> modules = new List<GameObject>();
-    private GameObject topPiece;
 
-    public float moduleSize = 2f;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        bottomPiece = Instantiate(baseThrusters);
-        topPiece = Instantiate(endCap);
-    }
+    private float moduleSize = 2f;
 
     // Update is called once per frame
     void Update()
     {
+        UpdateEndCapPosition();
+    }
+
+    private void UpdateEndCapPosition()
+    {
         float verticalOffset = moduleSize * (modules.Count + 1);
-        topPiece.transform.position = new Vector3(0f, verticalOffset, 0f);
+        endCap.transform.position = new Vector3(0f, verticalOffset, 0f);
+    }
+
+    public void AddModule(GameObject moduleObject)
+    {
+        float verticalOffset = moduleSize * (modules.Count + 1);
+        GameObject addedModule = Instantiate(moduleObject);
+        modules.Add(addedModule);
+        addedModule.transform.position = new Vector3(0f, verticalOffset, 0f);
     }
 }
