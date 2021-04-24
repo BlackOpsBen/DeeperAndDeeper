@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PreviewShip : MonoBehaviour
+public class DisplayShip : MonoBehaviour
 {
     [SerializeField] GameObject baseThrusters;
     [SerializeField] GameObject endCap;

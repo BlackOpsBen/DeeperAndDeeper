@@ -24,7 +24,7 @@ public class CreateModuleButtons : MonoBehaviour
             buttons.Add(button);
 
             SetOnClick(button, i);
-            SetText(button, i);
+            SetUI(button, i);
         }
     }
 
@@ -45,9 +45,10 @@ public class CreateModuleButtons : MonoBehaviour
         btnComp.onClick.AddListener(() => shipManager.AddModule(index));
     }
 
-    private void SetText(GameObject button, int index)
+    private void SetUI(GameObject button, int index)
     {
-        TextMeshProUGUI text = button.GetComponentInChildren<TextMeshProUGUI>();
-        text.text = "Test " + index.ToString();
+        DisplayButton displayButton = button.GetComponent<DisplayButton>();
+        ModuleOption modOption = shipManager.GetModuleOptions()[index];
+        displayButton.InitializeButton(modOption.name, modOption.icon, modOption.goldCost);
     }
 }

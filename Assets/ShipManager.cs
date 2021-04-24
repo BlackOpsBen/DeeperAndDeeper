@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ShipManager : MonoBehaviour
 {
-    [SerializeField] private PreviewShip previewShip;
+    [SerializeField] private DisplayShip previewShip;
 
     [SerializeField] private ModuleOption[] moduleOptions;
 
@@ -35,6 +35,9 @@ public class ShipManager : MonoBehaviour
 [System.Serializable]
 public class ModuleOption
 {
+    [SerializeField] public string name;
+    [SerializeField] public Sprite icon;
     [SerializeField] public GameObject moduleObject;
-    [SerializeField] public int quantity = 0;
+    [SerializeField] public int goldCost;
+    [HideInInspector] public int quantity = 0;
 }
