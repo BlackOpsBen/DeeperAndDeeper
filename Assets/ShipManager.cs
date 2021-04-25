@@ -24,6 +24,7 @@ public class ShipManager : MonoBehaviour
 public class ModuleOption
 {
     [SerializeField] public string name;
+    [SerializeField] public string tooltip;
     [SerializeField] public Sprite icon;
     [SerializeField] public GameObject moduleObject;
     [SerializeField] public int goldCost;

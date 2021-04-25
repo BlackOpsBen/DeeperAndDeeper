@@ -31,6 +31,7 @@ public class CreateUpgradeButtons : MonoBehaviour
             buttons.Add(button);
 
             SetOnClick(button, i);
+            SetMouseEvents(button, i);
             SetUI(button, i);
         }
     }
@@ -47,6 +48,13 @@ public class CreateUpgradeButtons : MonoBehaviour
     {
         Button btnComp = button.GetComponent<Button>();
         btnComp.onClick.AddListener(() => purchaseManager.AttemptBuyUpgrade(index));
+    }
+
+    private void SetMouseEvents(GameObject button, int index)
+    {
+        MouseEventToolTips handler = button.GetComponent<MouseEventToolTips>();
+        string foundText = upgradeManager.GetUpgradeOptions()[index].tooltip;
+        handler.SetTooltipText(foundText);
     }
 
     private void SetUI(GameObject button, int index)

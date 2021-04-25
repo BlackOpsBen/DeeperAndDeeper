@@ -34,6 +34,7 @@ public class UpgradeManager : MonoBehaviour
 public class UpgradeOption
 {
     [SerializeField] public string baseName;
+    [SerializeField] public string tooltip;
     [HideInInspector] public string displayName;
     [SerializeField] public Sprite icon;
     [SerializeField] public int dataCost;

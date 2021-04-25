@@ -30,6 +30,7 @@ public class CreateModuleButtons : MonoBehaviour
             buttons.Add(button);
 
             SetOnClick(button, i);
+            SetMouseEvents(button, i);
             SetUI(button, i);
         }
 
@@ -42,6 +43,7 @@ public class CreateModuleButtons : MonoBehaviour
         buttons.Add(button);
 
         SetOnClick(button);
+        SetMouseEvents(button);
         SetUI(button);
 
         Button btnComp = button.GetComponent<Button>();
@@ -70,6 +72,19 @@ public class CreateModuleButtons : MonoBehaviour
     {
         Button btnComp = button.GetComponent<Button>();
         btnComp.onClick.AddListener(() => purchaseManager.AttemptBuyFuel(refuelCost));
+    }
+
+    private void SetMouseEvents(GameObject button, int index)
+    {
+        MouseEventToolTips handler = button.GetComponent<MouseEventToolTips>();
+        string foundText = shipManager.GetModuleOptions()[index].tooltip;
+        handler.SetTooltipText(foundText);
+    }
+
+    private void SetMouseEvents(GameObject button)
+    {
+        MouseEventToolTips handler = button.GetComponent<MouseEventToolTips>();
+        handler.SetTooltipText("Transmute Gold into Fuel to refill all Fuel Tanks.");
     }
 
     private void SetUI(GameObject button, int index)
