@@ -19,6 +19,10 @@ public class VariableSkybox : MonoBehaviour
     {
         calculateDistance = FindObjectOfType<CalculateDistance>();
 
+        Material skyboxMatCopy = new Material(RenderSettings.skybox);
+
+        RenderSettings.skybox = skyboxMatCopy;
+
         RenderSettings.skybox.SetColor("_colorTop", skyboxThresholds[0].topColor);
         RenderSettings.skybox.SetColor("_colorBottom", skyboxThresholds[0].bottomColor);
         RenderSettings.skybox.SetFloat("_gradientHeight", skyboxThresholds[0].height);
