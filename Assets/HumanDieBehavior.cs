@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class HumanDieBehavior : MonoBehaviour, IDie
 {
+    [SerializeField] GameObject diePFXPrefab;
+
     public void Die()
     {
-        Debug.LogWarning("Enemy Destroyed!");
+        Instantiate(diePFXPrefab, transform.position, Quaternion.identity);
+        Destroy(gameObject);
     }
 }

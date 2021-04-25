@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class HumanHitBehavior : MonoBehaviour, IHit
 {
+
+    [SerializeField] private ParticleSystem hitPFX;
+
     public void TriggerHitBehavior()
     {
-        Debug.LogWarning("Enemy hit!");
+        hitPFX.Play();
     }
 }
