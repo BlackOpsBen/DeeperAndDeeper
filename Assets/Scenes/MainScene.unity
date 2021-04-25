@@ -2086,6 +2086,11 @@ MonoBehaviour:
     volume: 1
     pitch: 1
     source: {fileID: 0}
+  - name: Laser
+    clip: {fileID: 8300000, guid: 451ce3c47076e194f88e42cbeb751c16, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
   dialog:
     name: Default
     dialogCategories:
