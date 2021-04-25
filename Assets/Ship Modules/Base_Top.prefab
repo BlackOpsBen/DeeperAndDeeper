@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7790686705514330499}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: CamTargetTop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,7 +41,7 @@ GameObject:
   - component: {fileID: 2491839395808088638}
   - component: {fileID: 6286998133364592382}
   - component: {fileID: 70351349153528903}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Base_Top
   m_TagString: Untagged
   m_Icon: {fileID: 0}

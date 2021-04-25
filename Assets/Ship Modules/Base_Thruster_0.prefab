@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3607427320399040664}
   - component: {fileID: 2189718630632624700}
   - component: {fileID: 275868377342494227}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Base_Thruster_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -91,7 +91,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1752614544311355488}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: CamTargetBottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}

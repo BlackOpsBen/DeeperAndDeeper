@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2350952637730399448}
   - component: {fileID: 2698062566079626956}
   - component: {fileID: 4247181283067990949}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Mod_FuelTank
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -145,6 +145,10 @@ PrefabInstance:
     - target: {fileID: 4540631050993484432, guid: 240199c3f5e9fc844905f3bd7fe15136, type: 3}
       propertyPath: m_Name
       value: PoofPFX
+      objectReference: {fileID: 0}
+    - target: {fileID: 4540631050993484432, guid: 240199c3f5e9fc844905f3bd7fe15136, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4540631050993484445, guid: 240199c3f5e9fc844905f3bd7fe15136, type: 3}
       propertyPath: m_RootOrder
