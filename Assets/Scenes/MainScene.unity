@@ -7827,7 +7827,7 @@ MonoBehaviour:
   previewShip: {fileID: 246912930}
   moduleOptions:
   - name: Fuel Tank
-    tooltip: Transmute Gold into Fuel to refill all Fuel Tanks.
+    tooltip: Increases Fuel capacity.
     icon: {fileID: 21300000, guid: 4805bf9b8db50244dab0579ec0ef5bd6, type: 3}
     moduleObject: {fileID: 1825029760694321125, guid: 8b76d9df9c55c4e41a6a72ca12285f3f, type: 3}
     goldCost: 210
