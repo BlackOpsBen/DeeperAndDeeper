@@ -17,6 +17,8 @@ public class FuelManager : MonoBehaviour
 
     private UpgradeManager upgradeManager;
 
+    [SerializeField] ParticleSystem[] thrusterPS;
+
     //private ShipManager shipManager;
 
     private void Start()
@@ -38,6 +40,7 @@ public class FuelManager : MonoBehaviour
     {
         if (currentFuel > 0.0f)
         {
+            TogglePS(true);
             float actualBurnRate = baseBurnRate + (burnRateIncrement * (upgradeManager.GetUpgradeMultiplier(2) - 1));
             float actualEfficiencyMultiplier = baseEfficiencyMultiplier + (efficiencyIncrement * (upgradeManager.GetUpgradeMultiplier(2) - 1));
             calculateDistance.Accelerate(Time.deltaTime * actualBurnRate * actualEfficiencyMultiplier);
@@ -49,12 +52,29 @@ public class FuelManager : MonoBehaviour
 
             Camera.main.GetComponent<CameraShake>().AddShake(1f);
         }
+        else
+        {
+            TogglePS(false);
+        }
     }
 
-    /*private void UpdateCapacity()
+    private void TogglePS(bool value)
     {
-        currentCapacity = shipManager.GetModuleOptions()[0].quantity * startingCapacity + startingCapacity; // TODO make not hardcoded
-    }*/
+        if (value)
+        {
+            foreach (ParticleSystem ps in thrusterPS)
+            {
+                ps.Play();
+            }
+        }
+        else
+        {
+            foreach (ParticleSystem ps in thrusterPS)
+            {
+                ps.Stop();
+            }
+        }
+    }
 
     public void ModifyCapacity(float amount)
     {
