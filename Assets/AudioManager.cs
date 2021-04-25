@@ -5,10 +5,12 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    public const int DIALOG_SELECTED = 0;
-    public const int DIALOG_KILL = 1;
-    public const int DIALOG_HURT = 2;
-    public const int DIALOG_DEAD = 3;
+    public const int DIALOG_LAUNCH = 0;
+    public const int DIALOG_GOLD = 1;
+    public const int DIALOG_DATA = 2;
+    public const int DIALOG_ALCHEMIST = 3;
+    public const int DIALOG_SCIENTIST = 4;
+    public const int DIALOG_WEAPON = 5;
 
     public static AudioManager Instance { get; private set; }
 
@@ -24,14 +26,14 @@ public class AudioManager : MonoBehaviour
     private bool someoneIsSpeaking = false;
     private float speakingDuration = 0f;
 
-    private DialogLimiter dialogLimiter;
+    //private DialogLimiter dialogLimiter;
 
     private float timeSinceLastReminder = 4f;
     private float reminderInterval = 5f;
 
     private void Awake()
     {
-        dialogLimiter = GetComponent<DialogLimiter>();
+        //dialogLimiter = GetComponent<DialogLimiter>();
         SingletonPattern();
         CreateAudioSources(ref SFX);
 
@@ -106,22 +108,18 @@ public class AudioManager : MonoBehaviour
         musicAudioSource.Stop();
     }
 
-    public void PlayDialog(int playerIndex, int DIALOG_CATEGORY, bool oneAtATime)
+    public void PlayDialog(int DIALOG_CATEGORY)
     {
         int maxOption = dialog.dialogCategories[DIALOG_CATEGORY].dialogsOptions.Length;
         int selectedOption = UnityEngine.Random.Range(0, maxOption);
         Sound s = dialog.dialogCategories[DIALOG_CATEGORY].dialogsOptions[selectedOption];
 
-        if (oneAtATime)
+        if (someoneIsSpeaking)
         {
-            if (someoneIsSpeaking || !dialogLimiter.GetCanSpeak())
-            {
-                return;
-            }
-            speakingDuration = s.source.clip.length;
-            someoneIsSpeaking = true;
-            dialogLimiter.SetCanSpeak(false);
+            return;
         }
+        speakingDuration = s.source.clip.length;
+        someoneIsSpeaking = true;
 
         s.source.Play();
     }

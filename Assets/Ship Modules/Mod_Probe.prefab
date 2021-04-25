@@ -147,6 +147,7 @@ GameObject:
   - component: {fileID: 6401943051934498812}
   - component: {fileID: 515620079329258247}
   - component: {fileID: 6885046326993652387}
+  - component: {fileID: 6414164628926712263}
   m_Layer: 0
   m_Name: Mod_Probe
   m_TagString: Untagged
@@ -243,6 +244,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 271a2ca89d6f84843bbacd42e77819e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6414164628926712263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2982416327133086242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 849c22fa93d08a2498671e1bfd489ef0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogCategoryIndex: 4
 --- !u!1 &5082690203199513579
 GameObject:
   m_ObjectHideFlags: 0

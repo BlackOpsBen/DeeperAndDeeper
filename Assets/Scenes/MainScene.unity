@@ -2086,8 +2086,50 @@ MonoBehaviour:
     pitch: 1
     source: {fileID: 0}
   dialog:
-    name: 
-    dialogCategories: []
+    name: Default
+    dialogCategories:
+    - name: Launch
+      dialogsOptions:
+      - name: Launch1
+        clip: {fileID: 8300000, guid: 334ab9d3e96da5842b89388c84d2884a, type: 3}
+        volume: 0.5
+        pitch: 1
+        source: {fileID: 0}
+    - name: Not Enough Gold
+      dialogsOptions:
+      - name: Gold1
+        clip: {fileID: 8300000, guid: e46bd71e4c0a7f948b24751d2bca5e37, type: 3}
+        volume: 0.5
+        pitch: 1
+        source: {fileID: 0}
+    - name: Not Enough Data
+      dialogsOptions:
+      - name: Data1
+        clip: {fileID: 8300000, guid: 7b2011b3c7bea574383848bfbcbd992e, type: 3}
+        volume: 0.5
+        pitch: 1
+        source: {fileID: 0}
+    - name: Buy Alchemist
+      dialogsOptions:
+      - name: Alchemist1
+        clip: {fileID: 8300000, guid: a6967a8c633c99543a59b83a651821bf, type: 3}
+        volume: 0.5
+        pitch: 1
+        source: {fileID: 0}
+    - name: Buy Scientist
+      dialogsOptions:
+      - name: Scientist1
+        clip: {fileID: 8300000, guid: b18dd30ebdb70b7458b438d4a7abc9da, type: 3}
+        volume: 0.5
+        pitch: 1
+        source: {fileID: 0}
+    - name: Buy Weapon
+      dialogsOptions:
+      - name: Weapon1
+        clip: {fileID: 8300000, guid: 83d88f6a6bad0ad4295068decdec56eb, type: 3}
+        volume: 0.5
+        pitch: 1
+        source: {fileID: 0}
   musicAudioSource: {fileID: 1024144178}
 --- !u!4 &1024144180
 Transform:
@@ -7589,8 +7631,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dec0534a7571b10419db37b2f1da10b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingData: 100000
-  startingGold: 100000
+  startingData: 0
+  startingGold: 1000
 --- !u!114 &2111303432
 MonoBehaviour:
   m_ObjectHideFlags: 0

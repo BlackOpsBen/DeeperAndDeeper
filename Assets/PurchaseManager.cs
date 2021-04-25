@@ -34,6 +34,7 @@ public class PurchaseManager : MonoBehaviour
         {
             // Insufficient Gold
             Debug.LogWarning("Not enough gold.");
+            AudioManager.Instance.PlayDialog(AudioManager.DIALOG_GOLD);
         }
     }
 
@@ -51,6 +52,7 @@ public class PurchaseManager : MonoBehaviour
         {
             // Insufficient Gold
             Debug.LogWarning("Not enough gold.");
+            AudioManager.Instance.PlayDialog(AudioManager.DIALOG_GOLD);
         }
     }
 
@@ -70,6 +72,7 @@ public class PurchaseManager : MonoBehaviour
         {
             // Insufficient Gold
             Debug.LogWarning("Not enough data.");
+            AudioManager.Instance.PlayDialog(AudioManager.DIALOG_DATA);
         }
     }
 }
