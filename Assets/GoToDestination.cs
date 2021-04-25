@@ -20,6 +20,5 @@ public class GoToDestination : MonoBehaviour
     public void SetDestination(Vector3 newDestination)
     {
         destination = new Vector3(newDestination.x, newDestination.y, transform.position.z);
-        Debug.LogWarning("Destination set to: " + destination);
     }
 }

@@ -11,6 +11,9 @@ GameObject:
   - component: {fileID: 5870527819293424683}
   - component: {fileID: 7636383874781181892}
   - component: {fileID: 4714759118764691331}
+  - component: {fileID: 3577710975852554403}
+  - component: {fileID: 4125784915402607997}
+  - component: {fileID: 8064241774461032236}
   m_Layer: 0
   m_Name: Human
   m_TagString: Target
@@ -60,6 +63,43 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.77, y: 5.02, z: 1.8}
   m_Center: {x: 0, y: 0.81, z: 0}
+--- !u!114 &3577710975852554403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5870527819293424682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f20dbdd30c6235b478e0db0c1414aeba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHP: 5
+--- !u!114 &4125784915402607997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5870527819293424682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94c11fa3f5c537c409ab1dc7c5517a82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8064241774461032236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5870527819293424682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 473d283f0cb418e4586ed47fb74034cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &5140544765852054555
 PrefabInstance:
   m_ObjectHideFlags: 0

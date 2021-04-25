@@ -58,7 +58,6 @@ public class EnemySpawner : MonoBehaviour
         float destY = UnityEngine.Random.Range(-shipHeight / 2f, shipHeight / 2f) + shipHeight / 2f;
         float destZ = 0f;
         Vector3 value = new Vector3(destX, destY, destZ);
-        Debug.LogWarning("Returning: " + value);
         return value;
     }
 
