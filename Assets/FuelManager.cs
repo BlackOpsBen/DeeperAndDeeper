@@ -46,6 +46,8 @@ public class FuelManager : MonoBehaviour
             {
                 currentFuel = 0.0f;
             }
+
+            Camera.main.GetComponent<CameraShake>().AddShake(1f);
         }
     }
 
