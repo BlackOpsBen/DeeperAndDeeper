@@ -64,7 +64,10 @@ public class FuelManager : MonoBehaviour
         {
             foreach (ParticleSystem ps in thrusterPS)
             {
-                ps.Play();
+                if (ps.isStopped)
+                {
+                    ps.Play();
+                }
             }
             AudioManager.Instance.PlaySFXLoop("Thrust");
         }

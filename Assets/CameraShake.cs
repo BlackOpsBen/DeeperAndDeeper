@@ -10,10 +10,11 @@ public class CameraShake : MonoBehaviour
     [SerializeField] float cooldownSpeed = 1f;
     [SerializeField] float amount = 0;
     [SerializeField] float amountLimit;
+    [SerializeField] float minShakeAmount = 0.1f;
 
     private void Update()
     {
-        amount = Mathf.Clamp(amount, 0f, amountLimit);
+        amount = Mathf.Clamp(amount, minShakeAmount, amountLimit);
 
         if (amount > 0f)
         {
