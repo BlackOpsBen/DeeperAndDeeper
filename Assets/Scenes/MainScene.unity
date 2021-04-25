@@ -7515,6 +7515,58 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1507887227}
   m_CullTransparentMesh: 1
+--- !u!1 &1708819457
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1708819459}
+  - component: {fileID: 1708819458}
+  m_Layer: 0
+  m_Name: EnemySpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1708819458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1708819457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f91d00960d0564b4b97cb68b19f029c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  topOfShip: {fileID: 293427883}
+  bottomOfShip: {fileID: 200420276}
+  spawnableEnemies:
+  - enemyPrefab: {fileID: 5870527819293424682, guid: f0e5be528e81da44c87f08386f7f322d, type: 3}
+    slowestInterval: 5
+    minDistance: 100
+    fastestInterval: 1
+    fastestDistance: 1000
+  spawnPlaneZOffset: 5
+--- !u!4 &1708819459
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1708819457}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1794962181
 GameObject:
   m_ObjectHideFlags: 0
@@ -7876,8 +7928,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dec0534a7571b10419db37b2f1da10b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingData: 0
-  startingGold: 1000
+  startingData: 20000
+  startingGold: 10000
 --- !u!114 &2111303432
 MonoBehaviour:
   m_ObjectHideFlags: 0
