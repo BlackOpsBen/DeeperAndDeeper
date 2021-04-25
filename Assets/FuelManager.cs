@@ -40,7 +40,7 @@ public class FuelManager : MonoBehaviour
     {
         if (currentFuel > 0.0f)
         {
-            TogglePS(true);
+            ToggleFX(true);
             float actualBurnRate = baseBurnRate + (burnRateIncrement * (upgradeManager.GetUpgradeMultiplier(2) - 1));
             float actualEfficiencyMultiplier = baseEfficiencyMultiplier + (efficiencyIncrement * (upgradeManager.GetUpgradeMultiplier(2) - 1));
             calculateDistance.Accelerate(Time.deltaTime * actualBurnRate * actualEfficiencyMultiplier);
@@ -54,11 +54,11 @@ public class FuelManager : MonoBehaviour
         }
         else
         {
-            TogglePS(false);
+            ToggleFX(false);
         }
     }
 
-    private void TogglePS(bool value)
+    private void ToggleFX(bool value)
     {
         if (value)
         {
@@ -66,6 +66,7 @@ public class FuelManager : MonoBehaviour
             {
                 ps.Play();
             }
+            AudioManager.Instance.PlaySFXLoop("Thrust");
         }
         else
         {
@@ -73,6 +74,7 @@ public class FuelManager : MonoBehaviour
             {
                 ps.Stop();
             }
+            AudioManager.Instance.StopSFXLoop("Thrust");
         }
     }
 

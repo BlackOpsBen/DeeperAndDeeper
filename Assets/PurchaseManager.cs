@@ -27,6 +27,8 @@ public class PurchaseManager : MonoBehaviour
             // Successful purchase
             shipManager.AddModule(index);
             resourceManager.ModifyGold(-price);
+
+            AudioManager.Instance.PlaySFX("Pop1");
         }
         else
         {
@@ -42,6 +44,8 @@ public class PurchaseManager : MonoBehaviour
             // Successful purchase
             fuelManager.Refuel();
             resourceManager.ModifyGold(-price);
+
+            AudioManager.Instance.PlaySFX("Pop2");
         }
         else
         {
@@ -59,6 +63,8 @@ public class PurchaseManager : MonoBehaviour
             upgradeManager.PerformUpgrade(index);
             resourceManager.ModifyData(-price);
             createUpgradeButtons.UpdateButton(index);
+
+            AudioManager.Instance.PlaySFX("Pop3");
         }
         else
         {
