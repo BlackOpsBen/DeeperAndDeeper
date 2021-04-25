@@ -3,7 +3,12 @@ guid: 926cd9b25ffe89d429b229a7ecb70484
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GradMat
+    second: {fileID: 2100000, guid: 60cb880bf7f6f084b92022d849be3078, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
