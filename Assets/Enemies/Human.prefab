@@ -5032,6 +5032,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ThrusterPFX
       objectReference: {fileID: 0}
+    - target: {fileID: 1392624620666174612, guid: d31492268c07e3c4f987436c49ea8f98, type: 3}
+      propertyPath: playOnAwake
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d31492268c07e3c4f987436c49ea8f98, type: 3}
 --- !u!4 &6054380017341679753 stripped

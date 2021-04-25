@@ -19,6 +19,9 @@ public class AudioManager : MonoBehaviour
     [Header("SFX")]
     public Sound[] SFX;
 
+    [Header("Explosions")]
+    public Sound[] Explosions;
+
     [Header("Dialog")]
     public SoundGroup dialog;
 
@@ -38,6 +41,7 @@ public class AudioManager : MonoBehaviour
         //dialogLimiter = GetComponent<DialogLimiter>();
         SingletonPattern();
         CreateAudioSources(ref SFX);
+        CreateAudioSources(ref Explosions);
 
         foreach (DialogCategory dc in dialog.dialogCategories)
         {
@@ -80,6 +84,12 @@ public class AudioManager : MonoBehaviour
             s.source.volume = s.volume;
             s.source.pitch = s.pitch;
         }
+    }
+
+    public void PlayExplosion()
+    {
+        int rand = UnityEngine.Random.Range(0, Explosions.Length);
+        Explosions[rand].source.Play();
     }
 
     public void PlaySFX(string name)

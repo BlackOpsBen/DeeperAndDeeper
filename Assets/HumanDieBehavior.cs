@@ -9,6 +9,7 @@ public class HumanDieBehavior : MonoBehaviour, IDie
     public void Die()
     {
         Instantiate(diePFXPrefab, transform.position, Quaternion.identity);
+        AudioManager.Instance.PlayExplosion();
         Destroy(gameObject);
     }
 }

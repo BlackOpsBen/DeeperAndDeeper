@@ -2091,6 +2091,32 @@ MonoBehaviour:
     volume: 1
     pitch: 1
     source: {fileID: 0}
+  Explosions:
+  - name: Exp1
+    clip: {fileID: 8300000, guid: 2a415a1ba44fcf44a8b2f1cc8cc95b14, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Exp2
+    clip: {fileID: 8300000, guid: 55d504aa1f7335e48886bae2b8f90249, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Exp3
+    clip: {fileID: 8300000, guid: 0fd2e6bbb16c3874586c4e414957f857, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Exp4
+    clip: {fileID: 8300000, guid: ae033a4581817304b8ca9fded8aafbb0, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Exp5
+    clip: {fileID: 8300000, guid: a44e1c9be4abff840beb8f84097f53c8, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
   dialog:
     name: Default
     dialogCategories:

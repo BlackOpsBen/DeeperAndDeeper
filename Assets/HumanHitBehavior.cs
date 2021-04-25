@@ -10,5 +10,6 @@ public class HumanHitBehavior : MonoBehaviour, IHit
     public void TriggerHitBehavior()
     {
         hitPFX.Play();
+        AudioManager.Instance.PlayExplosion();
     }
 }
