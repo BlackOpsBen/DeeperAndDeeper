@@ -1935,11 +1935,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseParent: {fileID: 230217015}
-  amplitude: 0.2
+  amplitude: 0.1
   limitSmoothing: 0
   cooldownSpeed: 1
   amount: 0
   amountLimit: 0.5
+  minShakeAmount: 0.1
 --- !u!1 &1024144177
 GameObject:
   m_ObjectHideFlags: 0
