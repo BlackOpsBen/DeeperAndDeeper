@@ -6,7 +6,7 @@ public class UpgradeManager : MonoBehaviour
 {
     [SerializeField] private UpgradeOption[] upgradeOptions;
 
-    private void Start()
+    private void Awake()
     {
         foreach (UpgradeOption upgradeOption in upgradeOptions)
         {
