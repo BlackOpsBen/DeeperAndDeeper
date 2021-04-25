@@ -11,6 +11,8 @@ public class AudioManager : MonoBehaviour
     public const int DIALOG_ALCHEMIST = 3;
     public const int DIALOG_SCIENTIST = 4;
     public const int DIALOG_WEAPON = 5;
+    public const int DIALOG_FUEL = 6;
+    public const int DIALOG_TANK = 7;
 
     public static AudioManager Instance { get; private set; }
 

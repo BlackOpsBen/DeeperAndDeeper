@@ -46,6 +46,7 @@ public class PurchaseManager : MonoBehaviour
             resourceManager.ModifyGold(-price);
 
             AudioManager.Instance.PlaySFX("Pop2");
+            AudioManager.Instance.PlayDialog(AudioManager.DIALOG_FUEL);
         }
         else
         {

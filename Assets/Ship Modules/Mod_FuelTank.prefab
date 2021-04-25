@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4172670346948464479}
   - component: {fileID: 7739505019370387329}
   - component: {fileID: 2350952637730399448}
+  - component: {fileID: 2698062566079626956}
   m_Layer: 0
   m_Name: Mod_FuelTank
   m_TagString: Untagged
@@ -107,3 +108,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 271a2ca89d6f84843bbacd42e77819e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2698062566079626956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1825029760694321125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 849c22fa93d08a2498671e1bfd489ef0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogCategoryIndex: 7
