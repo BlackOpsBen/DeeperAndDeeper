@@ -396,12 +396,48 @@ MonoBehaviour:
     bottomColor: {r: 0, g: 0.081615925, b: 1, a: 0}
     height: 0.2
   - threshold: 100
-    topColor: {r: 0.43529412, g: 0, b: 0.36140823, a: 0}
-    bottomColor: {r: 0.15175453, g: 0, b: 0.4245283, a: 0}
-    height: 0.2
-  - threshold: 150
+    topColor: {r: 0.11875583, g: 0, b: 0.5566038, a: 0}
+    bottomColor: {r: 0, g: 0.015686275, b: 0.18039216, a: 0}
+    height: 1
+  - threshold: 1000
     topColor: {r: 0.36094323, g: 0, b: 0.6886792, a: 0}
     bottomColor: {r: 0, g: 0.018793792, b: 0.13207549, a: 0}
+    height: 1
+  - threshold: 2000
+    topColor: {r: 0.015686275, g: 0, b: 0.25490198, a: 0}
+    bottomColor: {r: 0.15456131, g: 0, b: 0.16037738, a: 0}
+    height: 1
+  - threshold: 4000
+    topColor: {r: 0, g: 0.14725922, b: 0.25490198, a: 0}
+    bottomColor: {r: 0, g: 0.01070412, b: 0.07450981, a: 0}
+    height: 1
+  - threshold: 8000
+    topColor: {r: 0.25490198, g: 0.081779085, b: 0, a: 0}
+    bottomColor: {r: 0.18867922, g: 0, b: 0.050651345, a: 0}
+    height: 1
+  - threshold: 12000
+    topColor: {r: 0.25490198, g: 0.08235294, b: 0, a: 0}
+    bottomColor: {r: 0.18823531, g: 0, b: 0.050980397, a: 0}
+    height: 1
+  - threshold: 16000
+    topColor: {r: 0, g: 0.015686275, b: 0.18039216, a: 0}
+    bottomColor: {r: 0.8018868, g: 0.7012579, b: 0, a: 0}
+    height: 0.2
+  - threshold: 32000
+    topColor: {r: 0.0674143, g: 0, b: 0.18039216, a: 0}
+    bottomColor: {r: 0, g: 0.5943396, b: 0.27968922, a: 0}
+    height: 0.2
+  - threshold: 48000
+    topColor: {r: 0.23815976, g: 0, b: 0.25490198, a: 0}
+    bottomColor: {r: 0.029805621, g: 0, b: 0.1882353, a: 0}
+    height: 1
+  - threshold: 64000
+    topColor: {r: 0, g: 0.018374644, b: 0.25490198, a: 0}
+    bottomColor: {r: 0, g: 0.1786574, b: 0.1882353, a: 0}
+    height: 1
+  - threshold: 128000
+    topColor: {r: 0.25490198, g: 0.08235294, b: 0, a: 0}
+    bottomColor: {r: 0.18823531, g: 0, b: 0.050980397, a: 0}
     height: 1
 --- !u!4 &95367123
 Transform:
@@ -7553,8 +7589,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dec0534a7571b10419db37b2f1da10b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingData: 2000
-  startingGold: 2000
+  startingData: 100000
+  startingGold: 100000
 --- !u!114 &2111303432
 MonoBehaviour:
   m_ObjectHideFlags: 0
