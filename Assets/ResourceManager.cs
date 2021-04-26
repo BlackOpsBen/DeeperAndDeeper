@@ -4,13 +4,20 @@ using UnityEngine;
 
 public class ResourceManager : MonoBehaviour
 {
+    public static ResourceManager Instance { get; private set; }
+
     //[SerializeField] private Resource[] resources;
     [SerializeField] private int startingData = 0;
     [SerializeField] private int startingGold = 100;
 
     private int data;
     private int gold;
-    
+
+    private void Awake()
+    {
+        SingletonPattern();
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +33,18 @@ public class ResourceManager : MonoBehaviour
     {
         return resources[index];
     }*/
+
+    private void SingletonPattern()
+    {
+        if (Instance != null)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            Instance = this;
+        }
+    }
 
     public int GetData()
     {
