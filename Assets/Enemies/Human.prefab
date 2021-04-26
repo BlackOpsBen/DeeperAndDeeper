@@ -4952,7 +4952,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   diePFXPrefab: {fileID: 6300624943787010158, guid: c7d998550acab8b40a2a79c46bd2e9d0, type: 3}
-  goldValue: 1000
+  goldValue: 500
 --- !u!114 &8064241774461032236
 MonoBehaviour:
   m_ObjectHideFlags: 0

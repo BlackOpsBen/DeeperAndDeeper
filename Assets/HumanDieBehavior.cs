@@ -10,6 +10,7 @@ public class HumanDieBehavior : MonoBehaviour, IDie
 
     public void Die()
     {
+        Debug.Log("Enemy killed");
         Instantiate(diePFXPrefab, transform.position, Quaternion.identity);
         AudioManager.Instance.PlayExplosion();
         ResourceManager.Instance.ModifyGold(goldValue);
